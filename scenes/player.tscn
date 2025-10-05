@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://botl0eyr6jes1"]
+[gd_scene load_steps=15 format=3 uid="uid://botl0eyr6jes1"]
 
 [ext_resource type="Script" uid="uid://d367agwswdfwp" path="res://assets/scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://ca2cyi0i3vrpi" path="res://assets/sprites/knight.png" id="1_jdwh2"]
@@ -47,6 +47,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_vtnr7"]
 radius = 5.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_fjrip"]
+font_size = 13
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
 
@@ -90,3 +93,13 @@ script = ExtResource("7_fjrip")
 idle_state = NodePath("../Idle")
 move_state = NodePath("../Move")
 metadata/_custom_type_script = "uid://fycitwa2lxv8"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -39.0
+offset_right = 18.0
+offset_bottom = -21.0
+text = "Test"
+label_settings = SubResource("LabelSettings_fjrip")
+horizontal_alignment = 1
+vertical_alignment = 1

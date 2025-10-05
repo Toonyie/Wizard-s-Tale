@@ -5,7 +5,6 @@ extends State
 @export var fall_state: State
 
 func process_input(event: InputEvent) -> State:
-	super(event)
 	if Input.is_action_just_pressed("jump") and parent.is_on_floor():
 		return jump_state
 	return null
